@@ -1,0 +1,146 @@
+<!DOCTYPE html> <!--now featuring readability-->
+<html>
+	<head>
+		<title>Net Neutrality Simulator</title>
+		<style>
+			button, h1, h2, div#crossword, input{
+			display: block;
+			margin: auto;
+			width: 17%;
+			}
+			h4{
+			display: block;
+			margin: auto;
+			text-align:center;
+			padding:1px;
+			}
+			hr {
+				display: block;
+				height: 1px;
+				border: 0;
+				border-top: 1px solid black;
+			}
+			
+			.table {
+				display: table;  
+				margin: 0 auto;
+			}
+			ul#horizontal-list {
+				min-width: 400px;
+				list-style: none;
+				padding-top: 20px;
+			}
+			ul#horizontal-list li {
+				display: inline;
+			}
+			li{
+				border: solid black 1px;
+				padding: 1px;
+			}
+			a{
+				text-decoration: none;
+			}
+			a:hover{
+				font-weight: bold;
+			}
+			div#crossword:hover{
+				background-color:lightgray;
+			}
+			
+			#first{
+				width: 300px;
+				float: left;
+				height: 400px;
+				border: solid 1px;
+				margin: 100px;
+				margin-left: 400px;
+			}
+			#second {
+				width: 300px;
+				float: left;
+				height: 400px;
+				border: solid 1px;
+				margin: 100px;
+			}
+			img{
+				max-width: 100%;
+				height: auto;
+				width: auto;
+			}
+			span{
+				margin: auto;
+				width: 100%;
+			}
+			#firstspan{
+			margin-left: 785px;
+			}
+		</style>
+		<script>
+		function afunction(){
+			window.alert("Save Net Neutrality!");
+			document.body.style.backgroundColor = 'red';
+			document.getElementById("abutton").disabled = true;
+			for(i=0;i<=1;i++){
+			document.querySelectorAll('h4').textContent[i] = 'Loading...';
+			}
+			for(i=0;i<=1;i++){
+			document.querySelectorAll('img').src[i] = 'http://media.giphy.com/media/JBeu9q9LC1Kve/giphy.gif';
+			}
+			for(i=0;i<=1;i++){
+			document.querySelector('p')[i].style.backgroundColor = 'black';
+			}
+			for(i=0;i<=document.querySelectorAll('a').length;i++){
+			document.querySelectorAll('a')[i].href = '';
+			}
+		}
+		</script>
+	<body>
+		<input type="button" onclick="" value="Lose Net Neutrality" style = "display:inline;" id = "abutton"/>
+		<hr/>
+		<h1 style = "font-family: Verdana;">The News Site</h1>
+		<div id="menu-outer">
+			<div class="table">
+				<ul id="horizontal-list">
+					<li><a href="https://www.google.com"/>World</a></li>
+					<li><a href="https://www.google.com"/>U.S.</a></li>
+					<li><a href="https://www.google.com"/>Tech</a></li>
+					<li><a href="https://www.google.com"/>Science</a></li>
+					<li><a href="https://www.google.com"/>Sports</a></li>
+					<li><a href="https://www.google.com"/>Arts</a></li>
+					<li><a href="https://www.google.com"/>Food</a></li>
+					<li><a href="https://www.google.com"/>Travel</a></li>
+				</ul>
+			</div>
+		</div>
+		<h2 id = "center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;January 31, 2018</h2><!--wait a minute dont dates change-->
+		<div id="crossword">
+			<h3 style="border: solid black 1px;text-align:center;">Daily Crossword</h3>
+		</div>
+		<div id="container">
+			<div id="first">
+				<h4>Something Happens</h4>
+				<p style = "padding: 2px; text-align: justify;">Recently, something has happened. This is a historic event, as it is not often that things happen.</p>
+				<a href="https://www.google.com" id = 'firstlink'>Learn More</a>
+				<img src="https://astutegraphics.com/wp-content/uploads/2015/05/final-2.png">
+				
+			</div>
+			<div id="second">
+				<h4>Discovery of HTML and CSS</h4>
+				<p style = "padding: 2px; text-align: justify;">Yesterday, researchers discovered HTML and CSS, allowing us to create static webpages. </p>
+				<a href="https://www.google.com">Learn More</a>
+				<img src="https://camo.githubusercontent.com/62043de0c3dec54f8a7fcc46e515dc7574a62ef7/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f7465737464726976656e6c6561726e696e676275636b65742f68746d6c6373732e6a7067">
+			</div>
+			<div id="clear"></div>
+		</div>
+		<h2 id = "savenn">Sign the petition to save Net Neutrality</h2>
+		<span id = 'firstspan'>Petitions: </span><span id = 'numberspan'>0</span>
+		<form>
+			<input type = "text" name = "name" placeholder = "Name"><br/>
+			<input type = "text" name = "email" placeholder = "Email"><br/>
+			<input type = "text" name = "comment" placeholder = "Comment"><br/>
+		</form>
+		<button id = 'petitionbutton'>Sign petition</button>
+		<div id = 'petitiondiv'></div>
+		<script src = 'script.js'></script>
+	</body>
+</html>
